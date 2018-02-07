@@ -1,0 +1,16 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testMail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gmail-send": "^1.2.13",
+    "googleapis": "^25.0.0",
+    "nodemailer": "^4.4.2"
+  }
+}
