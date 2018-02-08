@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "convert-excel-to-json": "^1.2.1",
     "gmail-send": "^1.2.13",
     "googleapis": "^25.0.0",
-    "nodemailer": "^4.4.2"
+    "nodemailer": "^4.4.2",
+    "qrcode": "^1.2.0"
   }
 }
