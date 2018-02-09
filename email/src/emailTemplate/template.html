@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        .background {
+            z-index: -10;
+            position: relative;
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+
+        .ticket {
+            z-index: 10;
+            width: 100%;
+            height: 40%;
+            background-color: #2C3E50;
+            padding: 1rem 1rem;
+            margin-top: 0vh;
+            position: relative;
+        }
+
+        .ticket-header {
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: .4rem;
+            background-color: darkmagenta;
+            text-align: center;
+        }
+
+        .ticket-body {
+            background-color: brown;
+            width: 100%;
+        }
+
+        .ticket-body__QR {
+            z-index: 12;
+            height: 20%;
+        }
+
+        .ticket-body__text-time {
+            background-color: #fff;
+            position: absolute;
+            left: 20%;
+            top: 30%;
+            font-size: 20px;
+            width: 40%;
+        }
+
+        .ticket-body__text-venue {
+            background-color: crimson;
+            position: absolute;
+            left: 20%;
+            top: 0%;
+            font-size: 20px;
+            width: 40%;
+        }
     </style>
 </head>
+
 <body>
-    <div class="ticket-header">Hi! </div>
-    <div class="ticket-body">
-        <div class="ticket-body__QR"></div>
-        <div class="ticket-body__text">The Show You Signed Up For is:</div>
+    <div class="ticket">
+        <div class="ticket-header">Hi! ***</div>
+        <div class="ticket-body">
+            <div class="ticket-body__QR">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data=' + receiver.submissionId+'&amp;size=100x100" alt="" title="TICKET"
+                    width="200" height="200" />
+            </div>
+            <div class="ticket-body__text-time">您要观看的演出是：2018年3月XX日 XX:00 - XX:00</div>
+            <div class="ticket-body__text-venue">地点：Dance Atelier 2, Level 3, Stephen Riady Centre, University Town, 2 College Ave West, Singapore 138607</div>
+        </div>
     </div>
 </body>
+
 </html>
